@@ -1,0 +1,17 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 36px;
+  padding: 0;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .profile {
+    display: grid;
+    grid-template-rows: 68px 38px;
+    grid-template-columns: min-content minmax(0, 583px) min-content;
+    gap: 10px 30px;
+    margin: 0 auto 51px;
+  }
+}

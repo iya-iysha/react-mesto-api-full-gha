@@ -1,0 +1,7 @@
+.popup__image-holder {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  box-sizing: border-box;
+  position: relative;
+}

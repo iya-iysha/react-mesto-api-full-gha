@@ -1,0 +1,14 @@
+.root {
+  min-width: 320px;
+  max-width: 880px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .root {
+    width: 95%;
+  }
+}

@@ -1,0 +1,7 @@
+.header__logged-in {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 0 24px;
+}

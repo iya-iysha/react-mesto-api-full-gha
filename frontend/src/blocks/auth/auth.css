@@ -1,0 +1,7 @@
+.auth {
+  width: 40.68%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 80px;
+  padding: 23.75px 0 0;
+}
