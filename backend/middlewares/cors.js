@@ -1,8 +1,6 @@
 const allowedCors = [
-  'https://praktikum.tk',
-  'http://praktikum.tk',
   'localhost:3000',
-  'http://mesto-react.iya-iysha.nomoreparties.co',
+  'https://mesto-react.iya-iysha.nomoreparties.co',
 ];
 
 const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
@@ -20,7 +18,7 @@ module.exports.cors = (req, res, next) => {
     res.header('Access-Control-Allow-Methods', DEFAULT_ALLOWED_METHODS);
     res.header('Access-Control-Allow-Headers', requestHeaders);
 
-    res.send();
+    res.status(200).send();
     return;
   }
 
