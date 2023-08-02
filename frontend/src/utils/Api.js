@@ -94,7 +94,7 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: 'https://api.mesto-react.iya-iysha.nomoreparties.co/',
+  baseUrl: 'https://api.mesto-react.iya-iysha.nomoreparties.co',
   headers: {
     authorization: `Bearer ${localStorage.getItem('jwt')}`,
     'Content-Type': 'application/json'
