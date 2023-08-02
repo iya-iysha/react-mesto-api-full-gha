@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://auth.nomoreparties.co';
+export const BASE_URL = 'https://api.mesto-react.iya-iysha.nomoreparties.co';
 
 const checkResponse = (res) => {
   if (res.ok) {
