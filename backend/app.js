@@ -10,6 +10,7 @@ const { createUser, login } = require('./controllers/users');
 const NotFoundError = require('./errors/NotFoundError');
 const { validateCreateUser, validateLogin } = require('./middlewares/validation');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
+const { cors } = require('./middlewares/cors');
 
 const { PORT = 3000, DB_URL = 'mongodb://127.0.0.1:27017/mestodb' } = process.env;
 
@@ -29,6 +30,8 @@ app.use(express.json());
 mongoose.connect(DB_URL, {
   useNewUrlParser: true,
 });
+
+app.use(cors);
 
 app.use(requestLogger);
 
