@@ -94,9 +94,9 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-64',
+  baseUrl: 'https://api.mesto-react.iya-iysha.nomoreparties.co/',
   headers: {
-    authorization: '020a6041-0af9-4bc3-8a98-f14edb94cfd4',
+    authorization: `Bearer ${localStorage.getItem('jwt')}`,
     'Content-Type': 'application/json'
   }
 }); 
