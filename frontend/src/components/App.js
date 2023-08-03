@@ -81,8 +81,8 @@ function App() {
 
   function handleUpdateAvatar(avatar) {
     api.editAvatar(avatar)
-    .then((user) => {
-      setCurrentUser(user);
+    .then((data) => {
+      setCurrentUser(data.user);
       closeAllPopups();
     })
     .catch((err) => console.log(err));
@@ -163,8 +163,8 @@ function App() {
 
   React.useEffect(() => {
     api.getUserInfo()
-    .then((user) => {
-      setCurrentUser(user);
+    .then((data) => {
+      setCurrentUser(data.user);
     })
     .catch((err) => console.log(err));
   }, [])
