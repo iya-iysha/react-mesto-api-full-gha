@@ -167,7 +167,7 @@ function App() {
       setCurrentUser(data.data);
     })
     .catch((err) => console.log(err));
-  }, [])
+  }, [loggedIn])
 
   React.useEffect(() => {
     api.getCardsInfo()
