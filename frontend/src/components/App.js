@@ -159,7 +159,7 @@ function App() {
 
   React.useEffect(() => {
     handleTokenCheck();
-  }, [])
+  }, [loggedIn])
 
   React.useEffect(() => {
     api.getUserInfo()
