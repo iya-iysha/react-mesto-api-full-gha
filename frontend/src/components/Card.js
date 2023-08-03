@@ -4,7 +4,8 @@ import React from 'react';
 export default function Card ({card, onCardClick, onCardLike, onCardDelete}) {
   const currentUser = React.useContext(CurrentUserContext);
   const isOwn = card.owner === currentUser._id;
-  const isLiked = card.likes.find(like => like === currentUser._id);
+  const likes = [...card.likes];
+  const isLiked = likes.find(like => like === currentUser._id);
   const cardLikeButtonClassName = (
     `card__heart-btn ${isLiked && 'card__heart-btn_active'}`
   );
@@ -28,7 +29,7 @@ export default function Card ({card, onCardClick, onCardLike, onCardDelete}) {
         <h2 className="card__title">{card.name}</h2>
         <div className="card__heart-area">
           <button className={cardLikeButtonClassName} type="button" aria-label="Оценить" onClick={handleLikeClick}></button>
-          <p className="card__heart-count">{card.likes.length}</p>
+          <p className="card__heart-count">{likes.length}</p>
         </div>
       </div>
       {isOwn && <button className="card__trash-btn" type="button" aria-label="Удалить" onClick={handleDeleteClick} />}
