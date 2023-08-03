@@ -3,8 +3,8 @@ import React from 'react';
 
 export default function Card ({card, onCardClick, onCardLike, onCardDelete}) {
   const currentUser = React.useContext(CurrentUserContext);
-  const isOwn = card.owner._id === currentUser._id;
-  const isLiked = card.likes.find(like => like._id === currentUser._id);
+  const isOwn = card.owner === currentUser._id;
+  const isLiked = card.likes.find(like => like === currentUser._id);
   const cardLikeButtonClassName = (
     `card__heart-btn ${isLiked && 'card__heart-btn_active'}`
   );
