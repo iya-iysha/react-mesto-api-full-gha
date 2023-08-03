@@ -1,6 +1,7 @@
 const allowedCors = [
-  'localhost:3000',
+  'http://localhost:3000',
   'https://mesto-react.iya-iysha.nomoreparties.co',
+  'http://mesto-react.iya-iysha.nomoreparties.co',
 ];
 
 const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
