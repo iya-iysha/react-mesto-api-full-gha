@@ -159,7 +159,7 @@ function App() {
 
   React.useEffect(() => {
     handleTokenCheck();
-  }, [loggedIn])
+  }, []);
 
   React.useEffect(() => {
     if (loggedIn) {
@@ -168,7 +168,7 @@ function App() {
           setCurrentUser(data.data);
         })
         .catch((err) => console.log(err));
-    }}, [loggedIn])
+    }}, [loggedIn]);
 
   React.useEffect(() => {
     if (loggedIn) {
@@ -177,7 +177,7 @@ function App() {
           setCards(data.data);
         })
         .catch((err) => console.log(err));
-    }}, [loggedIn])
+    }}, [loggedIn]);
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
