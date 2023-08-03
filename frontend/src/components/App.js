@@ -171,8 +171,8 @@ function App() {
 
   React.useEffect(() => {
     api.getCardsInfo()
-    .then((items) => {
-      setCards(items);
+    .then((data) => {
+      setCards(data.data);
     })
     .catch((err) => console.log(err));
   }, [])
