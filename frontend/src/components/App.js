@@ -115,13 +115,11 @@ function App() {
   function handleLogin({password, email}) {
     auth.login({ password, email })
     .then((data) => {
-      console.log('login1');
       if (data.token) {
         localStorage.setItem('jwt', data.token);
       }
     })
     .then(() => {
-      console.log('login2');
       handleSuccessLogin(email);
     })
     .catch((err) => {
@@ -168,7 +166,6 @@ function App() {
       api.getUserInfo()
         .then((data) => {
           setCurrentUser(data.data);
-          console.log('getUserInfo');
         })
         .catch((err) => console.log(err));
     }}, [loggedIn]);
