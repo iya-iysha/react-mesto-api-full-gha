@@ -12,6 +12,7 @@ class Api {
   }
 
   getUserInfo () {
+    this._headers.authorization = `Bearer ${localStorage.getItem('jwt')}`;
     return fetch(`${this._baseUrl}/users/me`, {
       headers: this._headers
     })
@@ -19,7 +20,6 @@ class Api {
   }
 
   editUserInfo (newName, newAbout) {
-    this.headers.authorization = `Bearer ${localStorage.getItem('jwt')}`;
     return fetch(`${this._baseUrl}/users/me`, {
       method: 'PATCH',
       headers: this._headers,
