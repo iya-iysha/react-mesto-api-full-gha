@@ -73,7 +73,7 @@ function App() {
   function handleUpdateUser(name, about) {
     api.editUserInfo(name, about)
     .then((data) => {
-      setCurrentUser(data.user);
+      setCurrentUser(data.data);
       closeAllPopups();
     })
     .catch((err) => console.log(err));
@@ -82,7 +82,7 @@ function App() {
   function handleUpdateAvatar(avatar) {
     api.editAvatar(avatar)
     .then((data) => {
-      setCurrentUser(data.user);
+      setCurrentUser(data.data);
       closeAllPopups();
     })
     .catch((err) => console.log(err));
@@ -164,7 +164,7 @@ function App() {
   React.useEffect(() => {
     api.getUserInfo()
     .then((data) => {
-      setCurrentUser(data.user);
+      setCurrentUser(data.data);
     })
     .catch((err) => console.log(err));
   }, [])
