@@ -19,7 +19,8 @@ export default function Main ({cards, onEditProfile, onAddPlace, onEditAvatar, o
         <button className="profile__add-btn" type="button" aria-label="Добавить место" onClick={onAddPlace}></button>
       </section>
       <section className="cards">
-        {cards.map((card) => (
+        {
+          cards.map((card) => (
           <Card key={card._id} card={card} onCardClick={onCardClick} onCardLike={onCardLike} onCardDelete={onCardDelete}/>
         ))
         }
