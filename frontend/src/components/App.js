@@ -163,20 +163,22 @@ function App() {
   }, [])
 
   React.useEffect(() => {
-    api.getUserInfo()
-    .then((data) => {
-      setCurrentUser(data.data);
-    })
-    .catch((err) => console.log(err));
-  }, [loggedIn])
+    if (loggedIn) {
+      api.getUserInfo()
+        .then((data) => {
+          setCurrentUser(data.data);
+        })
+        .catch((err) => console.log(err));
+    }}, [loggedIn])
 
   React.useEffect(() => {
-    api.getCardsInfo()
-    .then((data) => {
-      setCards(data.data);
-    })
-    .catch((err) => console.log(err));
-  }, [loggedIn])
+    if (loggedIn) {
+      api.getCardsInfo()
+        .then((data) => {
+          setCards(data.data);
+        })
+        .catch((err) => console.log(err));
+    }}, [loggedIn])
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
