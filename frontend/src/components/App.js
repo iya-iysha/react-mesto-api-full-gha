@@ -159,7 +159,7 @@ function App() {
 
   React.useEffect(() => {
     handleTokenCheck();
-  }, [loggedIn])
+  }, [loggedIn, currentUser])
 
   React.useEffect(() => {
     api.getUserInfo()
@@ -167,7 +167,7 @@ function App() {
       setCurrentUser(data.data);
     })
     .catch((err) => console.log(err));
-  }, [loggedIn])
+  }, [loggedIn, currentUser])
 
   React.useEffect(() => {
     api.getCardsInfo()
