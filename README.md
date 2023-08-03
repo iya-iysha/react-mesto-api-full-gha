@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 51.250.102.230
+IP 51.250.102.230
 
 Frontend https://mesto-react.iya-iysha.nomoreparties.co
 
