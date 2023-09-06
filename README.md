@@ -5,9 +5,9 @@
 
 Адрес репозитория: https://github.com/iya-iysha/react-mesto-api-full-gha/
 
-## Ссылки на проект (на данный момент ссылки не актуальны)
+## Ссылки на проект
 
-IP 51.250.102.230
+IP 158.160.27.95
 
 Frontend https://mesto-react.iya-iysha.nomoreparties.co
 
